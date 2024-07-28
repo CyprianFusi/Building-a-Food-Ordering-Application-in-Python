@@ -140,7 +140,7 @@ def checkout():
 # Prompting for User Input
 
 def get_user_request():
-    code = input('\nWhat do you wish to oder?\nEnter item code (Eg 1): ').strip()
+    code = input('\nWhat do you wish to order?\nEnter item code (Eg 1): ').strip()
     if code.isdigit():
         code = int(code)
     else:
@@ -157,6 +157,7 @@ def get_user_request():
 def display_actions():
     print('\n-------------------------------')
     print('****   Available Options   ****')
+    print('\nCode       Option            ')
     print('-------------------------------')
     for code in ACTIONS:
         print(f'({code}) {ACTIONS[code]}')
@@ -169,7 +170,7 @@ def process_user_request():
     
     while in_process:
         display_actions()
-        num = input('Enter corresponding code to continue: ').strip()
+        num = input('Enter corresponding code to continue (Eg 1): ').strip()
         if num.isdigit():
             num = int(num)
         else:
