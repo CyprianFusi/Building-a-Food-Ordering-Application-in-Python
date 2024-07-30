@@ -108,7 +108,7 @@ def modify_cart(code, qty, add = True):
     else:
         qty = -qty
         add_to_cart(code, qty)
-    if CART[sku] == 0:
+    if CART[sku] <= 0:
         delete_from_cart(code)
         
 # Viewing Cart Contents
